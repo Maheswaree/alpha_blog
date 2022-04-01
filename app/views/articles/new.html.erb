@@ -1,5 +1,6 @@
 <h1>Create a new article</h1>
     <% if @article.errors.any? %>
+    <h2> the following errrors are prevented article from being saved </h2>
        <% end %>
         <%= form_with scope: :article, url: articles_path, local: true do |f| %>
             <p>
