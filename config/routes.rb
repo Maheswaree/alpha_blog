@@ -6,5 +6,5 @@ get 'home', to: 'pages#home'
   # Defines the root path route ("/")
   # root "articles#index"
 get 'about', to: 'pages#about'
-resources :articles , only: [:show, :index]
+resources :articles #, only: [:show, :index, :new, :create]
 end
