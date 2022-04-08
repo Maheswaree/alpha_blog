@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_04_06_070736) do
+ActiveRecord::Schema[7.0].define(version: 2022_04_08_121810) do
+  create_table "anils", force: :cascade do |t|
+    t.string "username"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "articlees", force: :cascade do |t|
     t.string "title"
     t.string "string"
@@ -28,6 +35,19 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_06_070736) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "bookkss", force: :cascade do |t|
+    t.string "bookname"
+    t.string "authorname"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "books", force: :cascade do |t|
+    t.string "bookname"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "sciences", force: :cascade do |t|
     t.string "title"
     t.string "description"
@@ -39,6 +59,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_06_070736) do
     t.string "username"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "email"
   end
 
 end
